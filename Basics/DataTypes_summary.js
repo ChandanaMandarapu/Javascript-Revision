@@ -44,6 +44,3 @@ let userTwo = userOne
 userTwo.email = "chand@google.com"
 console.log(userOne.email)
 console.log(userTwo.email)
-
-
-    
