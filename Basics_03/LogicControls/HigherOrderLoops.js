@@ -81,8 +81,8 @@ const coding = [
     languagefileName: "java",
   },
   {
-    languageName: "Swift",
-    languagefileName: "sw",
+    languageName: "Ruby",
+    languagefileName: "rb",
   },
 ];
 
