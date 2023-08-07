@@ -9,7 +9,7 @@ const user = {
 };
 // In the first context the username chandana is printed
 user.greetings();
-user.username = "karthik"; // now we changed the context like changed the value of variable
+user.username = "sushanth"; // now we changed the context like changed the value of variable
 user.greetings();
 
 // Here this keyword in node prints the empty global object but in case of browser window object is given
