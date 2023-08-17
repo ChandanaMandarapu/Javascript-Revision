@@ -1,5 +1,6 @@
 // let var const
 
+// Prefer not to use var because an issue in block and functional scope
 const user = "Chandana"
 var userEmail = "chandanamandarapu93@gmail.com"
 let userPassword = "1234"
@@ -21,7 +22,7 @@ console.table([user,userEmail,userPassword,userCity,userState])
 // PRIMITVE DATATYPES - NNSSBBU 
 /*
 number range => 2^53
-NULL an empty value which neither assigned nor declared
+NULL an empty value which neither assigned nor declared [standalone value]
 undefined which isnt defined
 symbol used in REACT
  */
