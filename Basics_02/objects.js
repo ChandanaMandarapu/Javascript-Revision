@@ -1,6 +1,6 @@
 // Thier are 2 ways to declare objects
 // Constructor Objects which are singleton and are created using Object.create
-
+// Objects that are created by literals cant be singleton
 // Object Literals
 const mySymbol = Symbol("$");
 const user = {
@@ -9,11 +9,11 @@ const user = {
   email: "chandana@xml.com",
   isLoggedIn: false,
   data: [5, 8],
-  [mySymbol]: "$", //way of declaring symbols
+  [mySymbol]: "symbol", //way of declaring symbols
 };
 
 // correct way to access objects
-
+console.log(user.name)
 console.log(user["name"]);
 console.log(user[mySymbol]); //way to access symbol
 user.name = "chandana";

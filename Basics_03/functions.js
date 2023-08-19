@@ -1,5 +1,5 @@
 // function hmm a very intersting topic
-// normally functions are used most often here only 1 thing to remember everytime the code is executed it should return a vlaue and that should be stored into a variable if not the value is displayed but when we actually print the value it will be undefined
+// normally functions are used most often here only 1 thing to remember everytime the code is executed it should return a value and that should be stored into a variable if not the value is displayed but when we actually print the value it will be undefined
 function sum(a, b) {
   //   let result = a+b;
   //   return result;
@@ -22,9 +22,9 @@ function userMessage(username = "chand") {
 console.log(userMessage("chandana"));
 console.log(userMessage());
 
-//  When we dont know how many arguments are added we use rest operators
+//  When we dont know how many arguments are added we use rest operators which makes a bundle of elements in format of array
 
-function caluclateCartPrice(...num1) {
+function caluclateCartPrice(val1,val2,...num1) {
   return num1;
 }
 console.log(caluclateCartPrice(599, 999, 888, 666));

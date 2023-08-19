@@ -1,4 +1,4 @@
-const user = new Object();
+const user = new Object(); //singletonobject
 
 user.id = "@3344";
 user.name = "chand";
@@ -23,12 +23,12 @@ const obj1 = { 1: "A", 2: "B" };
 const obj2 = { 3: "C", 4: "D" };
 // here it gives the above 2 objects in another object
 
-const obj3 = { obj1, obj2 };
-console.log(obj3);
+// const obj3 = { obj1, obj2 };
+// console.log(obj3);
 
 // Here it returns the target object
-// const obj3 = Object.assign(obj1,obj2)
-// console.log(obj3);
+const obj3 = Object.assign(obj1,obj2)
+console.log(obj3);
 
 // Here we give a empty braces it gives a exact object perfectly
 // {} => Targets
@@ -66,14 +66,14 @@ const obj6 = [
 obj6[1].id;
 
 // Methods to access some key value pairs in object
-console.log(Object.keys(user));
-console.log(Object.values(user));
+console.log(Object.keys(user)); //type is ARRAY
 // gives each key value pair in array format
+console.log(Object.values(user));
+
 console.log(Object.entries(user));
 
 // To check whether the property is exist or not
-
-// console.log(user.hasOwnProperty(isLoggedIn))
+// console.log(user.hasOwnProperty('isLoggedIn'))
 
 // Object de-structure
 
@@ -92,3 +92,8 @@ const address = {
 const { colony } = address;
 
 console.log(colony);
+// destructuring
+const navbar = ({friend})=>{
+
+}
+navbar(friend = "k")

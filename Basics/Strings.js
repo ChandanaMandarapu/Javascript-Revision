@@ -1,13 +1,15 @@
 // Normal way of defining and concatenating Strings
 const name = "Chandana"
 const projectCount = 100
+const lang = "Javascript"
 console.log(name + projectCount);
 
 // Modern way of defining and concatenating strings
 
 console.log(`Hello my name is ${name} and I did almost ${projectCount} projects.`)
+console.log(`Currently Im learning and revising ${lang}`)
 
-// String like a object
+// Declaring String like a object
 
 const userName = new String('karthik-np-gd ')
 
@@ -18,13 +20,16 @@ console.log(userName.length)
 console.log(userName.toUpperCase());
 console.log(userName.charAt(3))
 console.log(userName.indexOf('h'))
+
 // even negitive values of index is assigned it ignores and starts from first itself
-const userName2 = userName.substring(0,4)
+const userName2 = userName.substring(0,4) //doesnt give the character at index 4
 console.log(userName2);
+
 // slice takes the -ve index too and give the required part
 
 const anotherString = userName.slice(-7,4)
 console.log(anotherString);
+
 // Trim is used mainly in input field in a form where if the user exceeds the char limit and add extra spaces we can use this to trim
 const trimString = "              chand            "
 console.log(trimString);

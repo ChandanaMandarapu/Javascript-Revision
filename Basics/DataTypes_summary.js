@@ -18,7 +18,7 @@ const myFunction = function (){
 
 // *********************************
 
-// STACK (Primitive) AND HEAP (Reference) MEMORy
+// STACK (Primitive) AND HEAP (Reference) MEMORY
 
 // Here originally the real value of variable myName is not changed instead it provided a copy of myName and nickname all primitive datatypes are stored inform of Stack
 
