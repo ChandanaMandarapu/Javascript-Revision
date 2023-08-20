@@ -1,0 +1,38 @@
+<!-- document.getElementById('title') 
+document.getElementById.class 
+document.getElementById.className
+document.getElementById.getAttribute('id')
+document.getElementById.getAttribute('class')
+
+THISBELOW ONE SET ATTRIBUTES OVERWRITES THE EXISTING CLASS WITH TEST SO FOR THAT U NEED TO MENTION CLEARLY TEST WITH HEADING
+
+document.getElementById.setAttribute('class','test,heading')
+
+WRAPPING UP TITLE INTO AN VARIABLE
+
+const title = document.getElementById('title') 
+now we can use styling on this
+title.style.padding = "10px"-->
+
+<!-- ADDING and GETTING CONTENT FROM DOM 
+title.textContent - HERE even after the span display is none the text is visible in the console like the span is viisble
+title.innerHTML - GIVES The whole html 
+title.innerText - BUT here as soon as the span display is set to none the content isnt displayed-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-color" style="background-color: black;
+color: white;" >
+    <div>
+        <h1 id="title" class="heading">
+           DOM revision with DOCS <span style="display: none;">HI hello</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html> 
