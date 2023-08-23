@@ -66,3 +66,32 @@ function intersectionCount(arr1, arr2) {
 const arr1 = [1, 2, 2, 1, 3];
 const arr2 = [2, 2, 3];
 console.log(intersectionCount(arr1, arr2));  
+
+//Character Frequency Count
+
+'use strict';
+
+function characterFrequency(inputString) {
+  const frequency = {};
+
+  for (let i = 0; i < inputString.length; i++) {
+    const char = inputString[i];
+    if (frequency[char]) {
+      frequency[char]++;
+    } else {
+      frequency[char] = 1;
+    }
+  }
+
+  console.log('Character Frequencies:');
+  for (const char in frequency) {
+    console.log(`'${char}': ${frequency[char]}`);
+  }
+}
+
+function main() {
+  const inputString = prompt('Enter a string: ');
+  characterFrequency(inputString);
+}
+
+main();
