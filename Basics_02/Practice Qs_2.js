@@ -46,3 +46,52 @@ function findLargestElement(arr) {
 }
 const numb = [5, 9, 2, 15, 7];
 console.log(findLargestElement(numb));
+
+// Array Intersection Count
+
+function intersectionCount(arr1, arr2) {
+    const set1 = new Set(arr1);
+    const set2 = new Set(arr2);
+    let count = 0;
+
+    for (const num of set1) {
+        if (set2.has(num)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+const arr1 = [1, 2, 2, 1, 3];
+const arr2 = [2, 2, 3];
+console.log(intersectionCount(arr1, arr2));  
+
+//Character Frequency Count
+
+'use strict';
+
+function characterFrequency(inputString) {
+  const frequency = {};
+
+  for (let i = 0; i < inputString.length; i++) {
+    const char = inputString[i];
+    if (frequency[char]) {
+      frequency[char]++;
+    } else {
+      frequency[char] = 1;
+    }
+  }
+
+  console.log('Character Frequencies:');
+  for (const char in frequency) {
+    console.log(`'${char}': ${frequency[char]}`);
+  }
+}
+
+function main() {
+  const inputString = prompt('Enter a string: ');
+  characterFrequency(inputString);
+}
+
+main();
