@@ -1,4 +1,4 @@
-***** JavaScript Basics: Comprehensive Notes for Revision *****
+ ## JavaScript Basics: Comprehensive Notes for Revision 
 
 .. Topics Revised ..
 
@@ -23,13 +23,13 @@
 
 => Primitive Data Types: These are basic building blocks of JavaScript and include:
 
-# Number: Used for both integers and floating-point numbers.
-# BigInt: Introduced in ECMAScript 11, it's used for representing arbitrarily large integers.
-# String: Represents textual data and is enclosed in single or double quotes.
-# Null: Represents the intentional absence of any value.
-# Undefined: Denotes a variable that has been declared but hasn't been assigned a value.
-# Boolean: Represents either `true` or `false`.
-# Symbol: Introduced in ECMAScript 6, used for creating unique identifiers.
+ Number: Used for both integers and floating-point numbers.
+ BigInt: Introduced in ECMAScript 11, it's used for representing arbitrarily large integers.
+ String: Represents textual data and is enclosed in single or double quotes.
+ Null: Represents the intentional absence of any value.
+ Undefined: Denotes a variable that has been declared but hasn't been assigned a value.
+ Boolean: Represents either `true` or `false`.
+ Symbol: Introduced in ECMAScript 6, used for creating unique identifiers.
 
 Type Conversion: JavaScript performs type conversions automatically. For example, you can concatenate a string and a number, and JavaScript will convert the number to a string to complete the operation.
 
