@@ -1,39 +1,43 @@
  ## JavaScript Basics: Comprehensive Notes for Revision 
 
-.. Topics Revised ..
+## Topics Revised
+Variables, Data Types, and Data Types Summary, Numbers, Math, Date, and Time
 
-## Variables, Data Types, and Data Types Summary
-## Numbers, Math, Date, and Time
-
-***** Variables, Data Types, and Data Types Summary *****
+## Variables, Data Types, and Data Types Summary 
 
 => Variables: let, var, const
 
 => In JavaScript, variables are fundamental for storing and manipulating data. It's important to choose the appropriate variable declaration based on your use case:
 
-=> let: This allows you to declare variables whose values can change over time. It's commonly used when the value is expected to change during program execution.
+=> let: This allows you to declare variables whose values can change over time. It's commonly used when the value is expected to change during program execution. let can be reused but we cant redeclare a particular variable again.
 
 => const: This is used to declare variables that hold constant values. Once a value is assigned to a const variable, it cannot be changed throughout the program's execution.
 
 => var: Historically used for variable declaration, but it has issues with scope. It's recommended to avoid using var due to its unpredictable behavior within different scopes.
 
-***** Data Types and ECMAScript *****
+## Data Types and ECMAScript
 
 => Understanding data types is crucial for effective programming in JavaScript. ECMAScript is the scripting language specification that JavaScript follows. Some key points include:
 
 => Primitive Data Types: These are basic building blocks of JavaScript and include:
 
- Number: Used for both integers and floating-point numbers.
- BigInt: Introduced in ECMAScript 11, it's used for representing arbitrarily large integers.
- String: Represents textual data and is enclosed in single or double quotes.
- Null: Represents the intentional absence of any value.
- Undefined: Denotes a variable that has been declared but hasn't been assigned a value.
- Boolean: Represents either `true` or `false`.
- Symbol: Introduced in ECMAScript 6, used for creating unique identifiers.
+ . Number: Used for both integers and floating-point numbers.
+ 
+ . BigInt: Introduced in ECMAScript 11, it's used for representing arbitrarily large integers.
+ 
+ . String: Represents textual data and is enclosed in single or double quotes.
+ 
+ . Null: Represents the intentional absence of any value.
+ 
+ . Undefined: Denotes a variable that has been declared but hasn't been assigned a value.
+ 
+ . Boolean: Represents either `true` or `false`.
+ 
+ . Symbol: Introduced in ECMAScript 6, used for creating unique identifiers.
 
 Type Conversion: JavaScript performs type conversions automatically. For example, you can concatenate a string and a number, and JavaScript will convert the number to a string to complete the operation.
 
-***** Type Conversion *****
+## Type Conversion 
 
 => Type conversions help manipulate data effectively. Be aware of these conversion rules:
 
@@ -43,7 +47,7 @@ Type Conversion: JavaScript performs type conversions automatically. For example
 
 => Boolean Conversion: Convert values to boolean using Boolean(). Empty strings and 0 are considered false, while non-empty strings and non-zero numbers are considered true.
 
-***** Comparisons of Data Types *****
+## Comparisons of Data Types
 
 => Comparing values is a fundamental part of programming. Keep in mind:
 
@@ -51,7 +55,7 @@ Type Conversion: JavaScript performs type conversions automatically. For example
 
 => Equality vs. Strict Equality: The == operator checks for equality after performing type conversions, while the === operator (strict equality) checks for equality without type conversion. It's generally recommended to use strict equality for predictable results.
 
-*** Dynamic Typing ***
+## Dynamic Typing
 
 => JavaScript is dynamically typed, meaning variables can hold values of any data type. This provides flexibility, but it's essential to be mindful of unexpected type-related behaviors.
 
@@ -63,9 +67,9 @@ Type Conversion: JavaScript performs type conversions automatically. For example
 
 => Reference Data Types: Objects, arrays, and functions are reference data types. They are stored in the heap, and variables hold references to the actual data.
 
-*** Numbers, Math, Date, and Time ***
+## Numbers, Math, Date, and Time 
 
-. Numbers and Math
+## Numbers and Math
 
 => Understanding numeric values and mathematical operations is crucial:
 
