@@ -67,6 +67,21 @@ console.log(1+"2") //12
 console.log("1"+2+2) //122
 console.log(1 + 2 + "2") //32
 
+// Post and Pre increments
+
+// Post-increment: variable is incremented AFTER its current value is used
+let num = 5;  // num starts with the value 5
+let result1 = num++;  // The current value of num (5) is assigned to result1, THEN num is increased to 6
+console.log(result1); // Output: 5
+console.log(num);     // Output: 6
+
+// Pre-increment: variable is incremented BEFORE its current value is used
+let numb = 5;  // num starts with the value 5
+
+let result2 = ++numb;  // num is increased to 6, THEN the value of num (6) is assigned to result2
+console.log(result2); // Output: 6
+console.log(numb);     // Output: 6
+
 // COMPARISIONS OF DATATYPES
 // make sure to compare values of same datatypes
 console.log("3" > 2);

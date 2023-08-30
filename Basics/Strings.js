@@ -4,7 +4,7 @@ const projectCount = 100
 const lang = "Javascript"
 console.log(name + projectCount);
 
-// Modern way of defining and concatenating strings
+// Modern way of defining and concatenating strings - String Interpolation
 
 console.log(`Hello my name is ${name} and I did almost ${projectCount} projects.`)
 console.log(`Currently Im learning and revising ${lang}`)
