@@ -140,6 +140,3 @@ Additional techniques include replacing substrings and detecting the presence of
 
 ## Splitting Strings
 JavaScript allows you to split strings into arrays using the split(separator) method. It divides the string at every occurrence of the specified separator and creates an array of substrings.
-
-=======
->>>>>>> ba6e5ca47a489abeb70e7aea2b7aee20ef5d2b92

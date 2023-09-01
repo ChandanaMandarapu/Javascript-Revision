@@ -1,8 +1,14 @@
 // function hmm a very intersting topic
+function mulitiply(n1,n2){
+  console.log(n1 * n2) // parameters
+}
+mulitiply(3,4) //arguments
+
 // normally functions are used most often here only 1 thing to remember everytime the code is executed it should return a value and that should be stored into a variable if not the value is displayed but when we actually print the value it will be undefined
 function sum(a, b) {
   //   let result = a+b;
   //   return result;
+  // console.log("Hello") this doesnt execute at all after return
   return a + b;
 }
 const result = sum(7, 8);

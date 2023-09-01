@@ -31,7 +31,7 @@ const add = (num1, num2) => {
 };
 console.log(add(3, 45));
 
-// IMPLICIT RETURN where we shouldnt use curlybraces only parenthisis is used
+// IMPLICIT RETURN where we shouldnt use curlybraces only parenthisis is used uf curlybraces are used we should definetly use return keyword
 
 const addTwo = (n1, n2) => n1 + n2;
 console.log(addTwo(3, 4))(
@@ -39,13 +39,12 @@ console.log(addTwo(3, 4))(
 
   // Immediately Invoked Function Expressions (IIFE) which executes immediately and used to avoid global scope variables pollution we use IIFE and to end this IIFE for sure ; is used
 
-  function two() {
+  (function two() {
     // Named IIFE
     console.log("connected");
-  }
-)();
-
+  }))();
+  
 ((name) => {
   // Unamed IIFE
-  console.log("chandana $(name");
-})("mandarapu");
+  console.log(`connected ${name}`);
+})("chandana mandarapu");

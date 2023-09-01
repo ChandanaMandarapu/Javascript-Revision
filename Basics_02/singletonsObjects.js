@@ -87,13 +87,20 @@ const address = {
 
 // address.colony
 
-// but to access alot of values we can use this method
+// but to access alot of values we can use this method here we are firstly mentioning the keys of object and where it should be accesed from 
 
 const { colony } = address;
 
 console.log(colony);
-// destructuring
+// destructuring in react
 const navbar = ({friend})=>{
 
 }
 navbar(friend = "k")
+
+// JSON STRUCTURE
+
+// {
+//   "name": "chandana",
+//   "age": "19"
+// }
