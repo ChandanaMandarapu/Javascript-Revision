@@ -49,7 +49,7 @@ for (const key in myObj) {
   console.log(`${key} is ${myObj[key]}`);
 }
 
-const friends = ["kuldeep", "kalyan", "amma", "chand"];
+const friends = ["kuldeep", "amma", "chand"];
 
 for (const key in friends) {
   console.log(key);
@@ -64,12 +64,23 @@ for (const key in map) {
 
 const langs = ["telugu", "hindi", "tamil", "malayalam", "kannada"];
 
+// callback function doesnt have a name here val is a parameter used for each element in array
 langs.forEach(function (val) {
   console.log(val);
 });
+
+// using arrow functions and we can also access index and whole array
+
 langs.forEach((items, index, arr) => {
   console.log(items, index, arr);
 });
+
+// using function as a refernce
+
+function print(price){
+  console.log(price)
+}
+langs.forEach(print)
 
 const coding = [
   {

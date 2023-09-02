@@ -1,56 +1,100 @@
-// const coding = ["js", "ruby", "java", "python", "cpp"]
+const coding = ["js","java","python","cpp"]
 
+// Here in for each loop we cant return anything incase of values
 
-// const values = coding.forEach( (item) => {
-//     //console.log(item);
-//     return item
-// } )
+const values = coding.forEach( (item) => {
+  console.log(item)
+  // return item
+})
 
-// console.log(values);
+console.log(values)
 
-const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// Using Filrer
+// Filter is also a callback function here we can access each value and also need to specify a condition to print the outcome the condition need to be satisfied then the value is returned
 
-// const newNums = myNums.filter( (num) => {
-//     return num > 4
-// } )
+const num = [1,2,3,4,5,6,7,8,9,10]
 
-// const newNums = []
+const greaterNum = num.filter( (num) => num > 4)
+const greatestNum = num.filter( (numb) => {
+  return numb > 3; //return keyword should be used in scope
+})
+console.log(greaterNum)
 
-// myNums.forEach( (num) => {
-//     if (num > 4) {
-//         newNums.push(num)
-//     }
-// } )
+// Using foreach
 
-// console.log(newNums);
+const newNums = []
 
+num.forEach((num) =>{
+  if(num > 4){
+    newNums.push(num)
+  }
+})
 
 const books = [
-    { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
-    { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
-    { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
-    { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010 },
-    { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 },
-    { title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010 },
-    { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 },
-    { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
-    { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
-  ];
+  {title:'Book One',genre: 'Fiction',publish: 1999, edition: 2003},,
+  {title:'Book Two',genre: 'Non-Fiction',publish: 1976, edition: 2000},
+  {title:'Book Three',genre: 'Science',publish: 1969, edition: 1980},
+  {title:'Book Four',genre: 'Romance',publish: 1999, edition: 2008},
+  {title:'Book Five',genre: 'History',publish: 1967, edition: 2001},
+  {title:'Book Six',genre:'Fiction',publish: 1989, edition: 2004},
+  {title:'Book Seven',genre: 'Science',publish: 1999, edition: 2003},
+  {title:'Book Eight',genre: 'Romance',publish: 1987, edition: 2008},
+  {title:'Book Nine',genre: 'History',publish: 1999, edition: 2002},
+  {title:'Book Ten',genre: 'Fiction',publish: 1999, edition: 2006}
+]
 
-  let userBooks = books.filter( (bk) => bk.genre === 'History')
+let userBooks = books.filter( (bk) => bk.genre === 'Fiction')
+console.log(userBooks)
 
-  userBooks = books.filter( (bk) => { 
-    return bk.publish >= 1995 && bk.genre === "History"
+userBooks = books.filter ( (bk) => {
+  return bk.publish > 1900 && bk.genre === "Romance";
 })
-  console.log(userBooks);
+// Maps and chaining
+const numbers = [1,2,3,4,5,6,7,8,9]
 
-  const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const newNumbers = numbers.map ((num) => num * 10)
+// Chaining
+const newNumbers = numbers
+                   .map((num) => num +10 ) 
+                   .map( (num) => num * 10) //gives the value of chained array
+                   .filter( (num) => num >= 140)
+console.log(newNumbers)
 
-// const newNums = myNumers.map( (num) => { return num + 10})
+// REDUCE
 
-const newNums = myNumers
-                .map((num) => num * 10 )
-                .map( (num) => num + 1)
-                .filter( (num) => num >= 40)
+const myNumbers = [1,2,3]
 
-console.log(newNums);
+const myTotal = myNumbers.reduce( function (accumalator,currentvalue){
+
+  console.log(`accumulator: ${accumalator} and currentvalue: ${currentvalue}`)
+  return accumalator + currentvalue
+}, 0)
+
+console.log(myTotal)
+
+const total = myNumbers.reduce( (acc,curval)=> acc + curval , 0)
+console.log(total)
+
+const shoppingCart = [
+  {
+    choclate: "DairyMilk",
+    price: 200
+  },
+  {
+    choclate: "Munch",
+    price: 20
+  },
+  {
+    choclate: "Kitkat",
+    price: 230
+  },
+  {
+    choclate: "Snickers",
+    price: 50
+  }
+]
+
+const myBill = shoppingCart.reduce( ( acc , item) => acc + item.price, 0)
+console.log(myBill)
+
+//BASICS DONE
