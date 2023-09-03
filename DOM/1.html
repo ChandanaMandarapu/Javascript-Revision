@@ -22,18 +22,85 @@ title.innerText - BUT here as soon as the span display is set to none the conten
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body class="bg-color" style="background-color: black;
-color: white;" >
+color: white;">
     <div>
         <h1 id="title" class="heading">
-           DOM revision with DOCS <span style="display: none;">HI hello</span>
+            DOM revision <span style="display: none;">HI hello</span>
         </h1>
         <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li class="list">chandana</li>
+            <li class="list">chandana</li>
+            <li class="list">chandana</li>
+            <li class="list">chandana</li>
+        </ul>
+
     </div>
+
+    <script>
+        // accesing ids | attributes | classes | classnames also we can get & set attributes
+        document.getElementById("title")
+        document.getElementById("title").id
+        document.getElementById("title").className
+        document.getElementById("title").class
+        document.getElementById("title").getAttribute("id")
+        document.getElementById("title").getAttribute("class")
+        document.getElementById("title").setAttribute("class", "text")
+        document.getElementById("title").getAttribute("class", "text heading")
+        const title = document.getElementById("title")
+        title.style.backgroundColor = "aquamarine"
+        title.style.padding = "18px"
+
+        // Query selector and adding css and texts
+
+        document.querySelector('h1')
+        document.querySelector("#title")
+        document.querySelector(".heading")
+        document.querySelector('ul')
+        const myul = document.querySelector('ul')
+        myul.querySelector('li')
+        const turnPink = myul.querySelector('li')
+        turnPink.style.backgroundColor = "pink"
+        turnPink.style.color = "black"
+        turnPink.style.padding = "12px"
+        turnPink.innerText
+        turnPink.innerText = "5"
+
+        // query selector all
+        document.querySelectorAll('li')
+        const tempLiList = document.querySelectorAll('li')
+        // To access nodelists we need to use [] otherwise it cant be accesed
+        tempLiList[0].style.color = "deepskyblue"
+        const myh1 = document.querySelectorAll('h1')
+        myh1[0].style.color = "pink"
+        tempLiList.forEach((li) => li.style.backgroundColor = "green")
+
+        // nodelist we can loop through using for each but in html collection we cant use even for each to use it we need to convert into arrays both nodelists and html collections can be converted into arrays. in nodelist every single thing counts childnodes linebreaks comments many things are involved
+
+        // Html collections
+
+        document.getElementsByClassName("list")
+        // HTMLCollection[]
+
+        // to convert we use this method
+
+        // Array.from()
+
+        document.getElementsByClassName("list")
+        const tempClassList = document.getElementsByClassName("list")
+        Array.from("tempClassList")
+        const myConvertedArray = Array.from("tempClassList")
+        myConvertedArray.forEach((li) => style.backgroundColor = "orange")
+
+    </script>
 </body>
-</html> 
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a new Element</title>
+</head>
+
+<body style="background-color: black; color: white;">
+
+</body>
+<script>
+
+    // Creating a element all this will be in the memory
+    const div = document.createElement('div')
+    console.log(div)
+    // adding properties to div
+    // id and classname overwrites
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    // prefer this more it directly sets the value
+    div.setAttribute("title", "Creating a title")
+    div.style.backgroundColor = "lime"
+    div.style.padding = "12px"
+    div.style.color = "#222"
+    // div.innerText = "Chandana Mandarapu - Self Taught Frontend Developer"
+    // creating a textNode is more preferable as it doesnt overwrite the existing value instead adds it
+    const text = document.createTextNode("Chandana Mandarapu - Self Taught Frontend Developer")
+    // adding node to div
+    div.appendChild(text)
+    // attaching to the document to display on page
+    document.body.appendChild(div)
+</script>
+
+</html>

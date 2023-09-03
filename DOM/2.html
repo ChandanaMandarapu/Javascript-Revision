@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent and Child</title>
+</head>
+<body style="background-color: #222; color: azure;">
+    <div class="parent">
+        <div class="month">January</div>
+        <div class="month">February</div>
+        <div class="month">March</div>
+        <div class="month">July</div>
+    </div>
+    <script>
+        const parent = document.querySelector('.parent')
+        console.log(parent)
+        console.log(parent.children[1].innerHTML);
+
+        for (let i = 0; i < parent.children.length; i++) {
+            console.log(parent.children[i].innerHTML);
+        }
+
+        parent.children[1].style.backgroundColor = "pink"
+        console.log(parent)
+        console.log(parent.firstElementChild)
+        console.log(parent.lastElementChild)
+
+        const monthOne = document.querySelector('.month')
+        console.log(monthOne)
+        console.log(monthOne.parentElement)
+        console.log(monthOne.nextElementSibling)
+        console.log('NODES: ', parent.childNodes)
+    </script>
+</body>
+</html>
