@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassLists</title>
+    <style>
+        .one{
+            color: teal;
+            text-decoration: line-through;
+            font-size: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="one">Hello World</h1>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum sit doloremque nemo exercitationem commodi pariatur id optio dolor obcaecati!</p>
+    <script>
+        const h1 = document.querySelector('h1')
+        console.log(h1.classList) //gives the list of all the classes
+        // adding class and removing class
+        h1.classList.add('styles')
+        h1.classList.remove('styles')
+        //toggle class if we want to add a specific class it adds and if we dont have a specific class it removes the class
+        h1.classList.toggle('new')
+
+        // appending anything in dom
+
+        const btn = document.createElement("button")
+        const body = document.body
+        btn.textContent = "Hello"
+        btn.classList.add("btn")
+        btn.style.backgroundColor = "teal"
+        btn.style.padding = "20px"
+        body.appendChild(btn)
+        
+        const ul = document.querySelector("ul")
+        const newLi = document.createElement('li')
+        newLi.innerText = 'Im Li'
+        ul.appendChild(newLi)
+        // insertBefore what when and where
+        const firstLi = document.querySelector('li')
+        ul.insertBefore(newLi,firstLi)
+        // insertAdjacent 
+
+        const firstP = document.querySelector('p')
+        const i = document.createElement('i')
+        i.innerText = "Im Italic"
+        i.style.color = "blue"
+
+        firstP.insertAdjacentElement('beforebegin',i);
+        
+        firstP.insertAdjacentElement('afterbegin',i);
+
+        firstP.insertAdjacentElement('beforeend',i);
+        
+        firstP.insertAdjacentElement('afterend',i);
+         
+        firstP.append(i)
+        </script>
+</body>
+</html>
