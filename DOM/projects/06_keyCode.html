@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keyCode</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            margin: 0;
+            background: linear-gradient(blueviolet, rgb(79, 21, 134));
+        }
+
+        #insert {
+            background-color: white;
+            padding: 50px;
+        }
+
+        .key {
+            border: 2px solid #ccc;
+            background-color: deeppink;
+            border: none;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px;
+            flex-direction: column;
+            margin: 10px;
+            min-width: 150px;
+            position: relative;
+        }
+
+        .key small {
+            position: absolute;
+            top: -24px;
+            left: 0;
+            text-align: center;
+            width: 100%;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="insert">
+        <div class="key">Press any key to get the keyCode</div>
+    </div>
+</body>
+<script>
+    const insert = document.getElementById("insert");
+
+    window.addEventListener("keydown", (event) => {
+        // if its ' ' then put out Space or else put out whatever key is
+        insert.innerHTML = `
+  <div class="key">
+  ${event.key === " " ? "Space" : event.key} 
+  <small>event.key</small>
+</div>
+
+  <div class="key">
+    ${event.keyCode}
+    <small>event.keyCode</small>
+  </div>
+
+  <div class="key">
+    ${event.code}
+    <small>event.code</small>
+  </div>
+  `;
+    });
+
+    // keyCode is deprecated
+</script>
+
+</html>
