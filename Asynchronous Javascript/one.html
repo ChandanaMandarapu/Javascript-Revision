@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+</head>
+<body>
+    <h1>Chandana Mandarapu</h1>
+    <button id="btn">Stop</button>
+
+    <h2>Pallavi Sharma</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // needs a handler like a callback which doesnt has a name and a timeout is needed executes after 2seconds once at a time
+
+    const sayGreetings = function(){
+        console.log("Hello")
+    }
+    const changeh1 = function(){
+        document.querySelector('h1').innerHTML = "Asynchronous Code"
+    }
+    setTimeout(sayGreetings,2000)
+    const changeMe = setTimeout(changeh1,2000)
+    // to stop the event
+    document.querySelector("#btn").addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("Stopped")
+    })
+
+    // setInterval
+
+    const sayHi = function(greet){
+        console.log(greet,Date.now())
+    }
+    let intervalId = setInterval(sayHi,3000,"Hi")
+    clearInterval(intervalId)
+    
+    document.querySelector("#start").addEventListener('click',function(){
+        intervalId = setInterval(sayHi,1000,"Hi")
+    })
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearInterval(intervalId)
+    })
+</script>
+</html>
