@@ -137,11 +137,3 @@ Additional techniques include replacing substrings and detecting the presence of
 1. Replacing Substrings: The replace(search, replacement) method replaces the first occurrence of search with replacement in the string. For example: url.replace("%", "-").
 
 2. String Detection: The includes(substring) method checks if the given substring exists in the string. It returns true if found, otherwise false.
-
-## Splitting Strings
-<<<<<<< HEAD
-JavaScript allows you to split strings into arrays using the split(separator) method. It divides the string at every occurrence of the specified separator and creates an array of substrings.
-=======
-JavaScript allows you to split strings into arrays using the split(separator) method. It divides the string at every occurrence of the specified separator and creates an array of substrings.
-
->>>>>>> 1f8dcc54184a9afbb801b1b650bdc32ec86a2409
