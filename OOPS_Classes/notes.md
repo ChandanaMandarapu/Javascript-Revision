@@ -2,7 +2,7 @@
 
 ## What is OOP?
 
-Object-Oriented Programming (OOP) is a programming paradigm that helps organize code into objects, making it easier to manage and understand. In OOP, everything is treated as an "object," which can have properties (attributes) and methods (functions). 
+Object-Oriented Programming (OOP) is a programming paradigm that helps organize code into objects, making it easier to manage and understand. In OOP, everything is treated as an "object," which can have properties (attributes) and methods (functions).
 
 JavaScript supports OOP, but it's not a strictly "classical" OOP language like Java or C++. Instead, it's a prototype-based OOP language.
 
@@ -16,28 +16,30 @@ An object literal is a way to define an object in JavaScript using curly braces 
 
 ```javascript
 const user = {
-    username: "hitesh",
-    loginCount: 8,
-    signedIn: true,
+  username: "hitesh",
+  loginCount: 8,
+  signedIn: true,
 
-    getUserDetails: function(){
-        console.log(this);
-    }
-}
+  getUserDetails: function () {
+    console.log(this);
+  },
+};
 ```
+
 In the above code, user is an object literal with properties like username, loginCount, and a method getUserDetails.
 
-
 ## Constructor Function
+
 A constructor function in JavaScript is a blueprint for creating objects. It's used to define and initialize objects of a specific type. Constructor functions are invoked using the new keyword. Here's an example:
 
 ```javascript
-function User(username, loginCount, isLoggedIn){
-    this.username = username
-    this.loginCount = loginCount
-    this.isLoggedIn = isLoggedIn
+function User(username, loginCount, isLoggedIn) {
+  this.username = username;
+  this.loginCount = loginCount;
+  this.isLoggedIn = isLoggedIn;
 }
 ```
+
 In the code above, User is a constructor function that can be used to create instances of users.
 
 ## Instances (new, this)
@@ -54,6 +56,7 @@ The instanceof operator in JavaScript checks if an object is an instance of a pa
 console.log(userOne instanceof User); // true
 console.log(userTwo instanceof User); // true
 ```
+
 In the code above, userOne and userTwo are instances of the User constructor function.
 
 ## "Four Pillars of OOP":
@@ -104,18 +107,18 @@ The this keyword in JavaScript refers to the current object, and it's a crucial 
 For example, if you have an object called pallavi and you call pallavi.score(), inside the score method, this will refer to the pallavi object.
 
 ```javascript
-function createUser(username, marks){
-    this.username = username;
-    this.marks = marks;
+function createUser(username, marks) {
+  this.username = username;
+  this.marks = marks;
 }
 
 // Adding methods to the prototype of createUser
-createUser.prototype.increment = function(){
-    this.marks++;
-}
-createUser.prototype.score = function(){
-    console.log(`marks are ${this.marks}`);
-}
+createUser.prototype.increment = function () {
+  this.marks++;
+};
+createUser.prototype.score = function () {
+  console.log(`marks are ${this.marks}`);
+};
 
 // Creating objects using the constructor function
 const pallavi = new createUser("pallavi", 80);
@@ -124,6 +127,7 @@ const karthik = new createUser("karthik", 98);
 // Calling a method on an object
 pallavi.score();
 ```
+
 I've defined a constructor function createUser. When you use new createUser(...), it creates a new object, sets its username and marks properties, and links it to the createUser.prototype.
 
 I've added two methods (increment and score) to the createUser.prototype. This means that every object created using new createUser(...) can access these methods through the prototype chain.
@@ -151,3 +155,79 @@ Prototypes allow us to add properties and methods that can be shared among objec
 When adding methods to prototypes, they become accessible to all objects created from that type.
 
 It's crucial to understand that properties added to prototypes can affect all objects of that type. In contrast, methods added to array prototypes won't work on arrays because arrays are a distinct type in JavaScript.
+
+# Lexical Scope & Closures
+
+## Lexical Scope
+
+Lexical Scope
+
+What is Lexical Scope?
+
+Lexical scope, also known as static scope, is a fundamental concept in programming that determines how variables are accessed and resolved within a program. It defines the visibility and accessibility of variables based on their location within the code.
+
+How Does Lexical Scope Work?
+
+In lexical scope, the scope of a variable is determined by where it is defined in the code, not where it is called. This means that variables are accessible only from within the block or function in which they are declared or from any nested blocks/functions.
+
+Example of Lexical Scope:
+
+```javascript
+function outerFunction() {
+  let x = 10;
+
+  function innerFunction() {
+    console.log(x); // Can access x because it's in the same lexical scope
+  }
+
+  innerFunction();
+}
+
+outerFunction(); // Outputs 10
+```
+
+In this example, x is accessible within innerFunction because it's defined in the lexical scope of outerFunction.
+
+## Closures
+
+What is a Closure?
+A closure is a powerful concept that arises from lexical scope. It occurs when a function "remembers" its lexical scope even if it's executed outside of that scope. In simpler terms, a closure allows a function to access variables from its parent function, even after the parent function has completed its execution.
+
+How Does a Closure Work?
+
+A closure is created when a function inside another function references a variable from the outer function. This inner function, along with its reference to the outer variable, forms a closure.
+
+Example of a Closure:
+
+```javascript
+function outerFunction() {
+  let x = 10;
+
+  function innerFunction() {
+    console.log(x); // This inner function forms a closure over x
+  }
+
+  return innerFunction;
+}
+
+const closureExample = outerFunction();
+closureExample(); // Outputs 10 (even though outerFunction already executed)
+```
+
+In this example, closureExample is a closure because it can still access x from outerFunction even after outerFunction has finished running.
+
+## Benefits of Closures
+
+Callback Functions: Closures are often used in callback functions, such as event handlers and asynchronous operations, to maintain context and data integrity.
+
+Real-World Use Cases
+
+Closures are used in various real-world scenarios:
+
+Event Handlers: In web development, closures are used in event handlers to remember the context in which they were created. This ensures that event handlers can access the correct variables even when triggered later.
+
+Module Pattern: Closures are employed to create private variables and methods in JavaScript modules, allowing developers to build organized and secure code.
+
+Memoization: Closures are used in memoization techniques to cache expensive function results and improve performance in recursive or repetitive computations.
+
+Managing State: Closures help manage state in React components and other frontend libraries, preserving data between renders.
