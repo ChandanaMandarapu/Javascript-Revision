@@ -58,3 +58,12 @@ You can create a shallow copy of an object using methods like Object.assign({}, 
 In an interview, how would you explain the importance of understanding memory allocation when working with JavaScript data types?
 
 Understanding memory allocation is important in JavaScript to efficiently manage memory usage, prevent memory leaks, and optimize performance. It helps developers write more efficient and reliable code, which is crucial for building scalable applications.
+
+Diff between var let const ?
+
+Var - a global variable which can be redeclared reassigned and it has global scope var shouldnt be used more often in JS
+
+let - let is a variable it has block scope . let can be reassigned but not redeclared 
+for example - let a = 9 let a = "chandana " is not possible declaring a twice is not possible in let but a = "chandana" a can be reassigned
+
+const - const is a scope variable where neither u can declare nor u can reassign it holds a constant value often used in handling errors
