@@ -34,3 +34,7 @@ console.log(null > 0);
 console.log(null == 0);       
 console.log(null >= 0);       
 
+// output of console.log(3 + true )
+
+console.log ( 3 + true )
+// output will be 4 because Javascript here uses implicit conversion which converts the boolean value if its true to 1 and false to 0 so if we use arthemitic operator Js considers it as a expression and gives a solution 3 + 1 = 4
