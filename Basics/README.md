@@ -137,3 +137,31 @@ Additional techniques include replacing substrings and detecting the presence of
 1. Replacing Substrings: The replace(search, replacement) method replaces the first occurrence of search with replacement in the string. For example: url.replace("%", "-").
 
 2. String Detection: The includes(substring) method checks if the given substring exists in the string. It returns true if found, otherwise false.
+
+## How JavaScript works ?
+
+Everything in JavaScript happens inside the Execution context
+
+In the Execution context all the variables and functions are stored like key value pairs inside the variable environment
+
+The code is executed one line at a time inside the Thread of Execution
+
+JavaScript is a Synchronous Single Threaded Language that means Js executes one command at a time that too in a specific order 
+
+## Behind the scens of JavaScript
+
+When actually code works firstly a Global Execution is created inside a call stack
+
+The Execution Context is executed in 2 phases first is memory creation phase
+
+Here Javascript allocates the memory to all the variables and the value of variables is undefined in case of functionss the whole code is stored within a specific code
+
+In the code Execution Phase Now again Js runs the code line by line here the real values of variables are assigned to the variables that are already stored 
+
+Running a function - A all together new execution context is created to run the function which again has a memory creation phase and a code execution context, it involves storing of all variables and parameters and again the code executes in Execution Context
+
+Now "return" tells the function to return the value of function to the real exectuion context after the whole function is executed now the functional execution context is compeltly deleted
+
+After the whole code is executed the global execution will also get deleted
+
+Call Stack maintains the order of execution of execution contexts
