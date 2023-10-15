@@ -1,4 +1,4 @@
-# Asynchronous JavaScript
+# Asynchronous JavaScript Understandings
 
 JavaScript is a programming language that typically runs one instruction at a time, in order, which is called synchronous execution. 
 
