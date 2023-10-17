@@ -177,3 +177,52 @@ Now "return" tells the function to return the value of function to the real exec
 After the whole code is executed the global execution will also get deleted
 
 Call Stack maintains the order of execution of execution contexts
+
+# JavaScript Null vs. Undefined 
+
+## Undefined
+
+### What is Undefined?
+Think of "undefined" as something that hasn't been defined or doesn't exist yet.
+If you declare a variable but don't give it a value, it becomes "undefined."
+
+```javascript
+let x; // x is undefined because we didn't give it a value
+```
+case 2 - When a function doesn't return anything, it also returns "undefined."
+```javascript
+function doNothing() {
+  // This function returns undefined because it doesn't return anything explicitly.
+}
+```
+case 3 -  If you try to access a property that doesn't exist in an object, you'll get "undefined."
+```javascript
+let person = {};
+console.log(person.age); // person.age is undefined because "age" doesn't exist
+```
+## Null
+
+"Null" is used when you want to say that something intentionally has no value.
+It's like an empty placeholder, indicating that there's nothing there.
+```javascript
+let emptyValue = null; // We explicitly set emptyValue to null, meaning it's intentionally empty.
+```
+case 2 - Often used in objects when a property doesn't have a value, or when you want to reset a variable.
+```javascript
+let person = {
+  name: "John",
+  age: null, // Here, we're saying that age is intentionally unknown or not set.
+}
+```
+## Main Differences
+
+"Undefined" is used for things that haven't been defined or don't exist, like uninitialized variables or missing properties.
+"Null" is used when you want to explicitly say that something is intentionally empty or doesn't have a value.
+When comparing them using loose equality (==), they are considered equal to each other and not equal to any other value.
+When comparing them using strict equality (===), they are not equal because they are different data types.
+
+```javascript
+console.log(null == undefined); // true
+console.log(null === undefined); // false
+```
+Conclusion - "undefined" is for things that weren't given a value, while "null" is for things intentionally left empty. Understanding these differences is important 
