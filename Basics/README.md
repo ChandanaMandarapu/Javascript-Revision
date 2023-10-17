@@ -15,11 +15,15 @@ Variables, Data Types, and Data Types Summary, Numbers, Math, Date, and Time
 
 => var: Historically used for variable declaration, but it has issues with scope. It's recommended to avoid using var due to its unpredictable behavior within different scopes.
 
+## Hoisting
+We can use the variable and functions even before declaration 
+variables and functions are hoisted which means their declaration is moved on the top of code
+
 ## Data Types and ECMAScript
 
 => Understanding data types is crucial for effective programming in JavaScript. ECMAScript is the scripting language specification that JavaScript follows. Some key points include:
 
-=> Primitive Data Types: These are basic building blocks of JavaScript and include:
+## Primitive Data Types:  
 
  . Number: Used for both integers and floating-point numbers.
  
@@ -35,6 +39,15 @@ Variables, Data Types, and Data Types Summary, Numbers, Math, Date, and Time
  
  . Symbol: Introduced in ECMAScript 6, used for creating unique identifiers.
 
+## Reference Datatypes:
+
+. [] , {} , () these are all refernces generally Arrays , Objects , () are considered to be reference datatypes
+When we try to store the value of b to a now here the copy of a is stored inside the variable b that means the changes we do to b can also reflect in a as "b" is a refernce of "a"
+
+```javascript
+var a = [23,4,4,5]
+var b = a;
+```
 Type Conversion: JavaScript performs type conversions automatically. For example, you can concatenate a string and a number, and JavaScript will convert the number to a string to complete the operation.
 
 ## Type Conversion 
@@ -95,7 +108,6 @@ Generating random numbers requires attention:
 => Methods like getMonth(), getDay(), and others help extract specific information from dates.
 
 => Timestamps: Represented in milliseconds, timestamps are crucial for comparing and tracking time intervals.
-<<<<<<< HEAD
 
 ## Strings
 

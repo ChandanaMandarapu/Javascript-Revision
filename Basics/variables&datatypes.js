@@ -1,5 +1,5 @@
 // let var const
-
+var x;
 // Prefer not to use var because an issue in block and functional scope
 const user = "Chandana"
 var userEmail = "chandanamandarapu93@gmail.com"
@@ -90,3 +90,8 @@ console.log("02" > 1)
 console.log(null > 0) // here null = 0 so it gives false
 console.log(null == 0) // here equality and comparision operators work differntly in JS
 console.log(null >= 0) //which returns true because here js converts null into 0 so in this case its true
+
+// HOISTING - Here value of x is undefined now the due to hoisting in javascript the let x; moves on to top and x = 12 remains in the bottom itself
+
+console.log(x)
+var x = 12
