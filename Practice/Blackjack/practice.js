@@ -80,3 +80,53 @@ function sortFruit() {
         }
     }
 }
+
+function calculateFactorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    return n * calculateFactorial(n - 1);
+}
+
+const factorialResult = calculateFactorial(5);
+console.log(`The factorial of 5 is ${factorialResult}`);
+
+function findLongestWord(words) {
+    let longestWord = "";
+    for (let word of words) {
+        if (word.length > longestWord.length) {
+            longestWord = word;
+        }
+    }
+    return longestWord;
+}
+
+const wordArray = ["apple", "banana", "strawberry", "blueberry", "watermelon"];
+const longest = findLongestWord(wordArray);
+console.log(`The longest word is: ${longest}`);
+
+// Obj comparision
+
+function compareObjects(obj1, obj2) {
+    const keys1 = Object.keys(obj1);
+    const keys2 = Object.keys(obj2);
+
+    if (keys1.length !== keys2.length) {
+        return false;
+    }
+
+    for (let key of keys1) {
+        if (obj1[key] !== obj2[key]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+const objA = { a: 1, b: 2, c: 3 };
+const objB = { a: 1, b: 2, c: 3 };
+const objC = { a: 1, b: 2, d: 4 };
+
+console.log("Objects A and B are equal:", compareObjects(objA, objB));
+console.log("Objects A and C are equal:", compareObjects(objA, objC));
