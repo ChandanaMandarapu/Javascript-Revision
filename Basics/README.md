@@ -225,4 +225,6 @@ When comparing them using strict equality (===), they are not equal because they
 console.log(null == undefined); // true
 console.log(null === undefined); // false
 ```
-Conclusion - "undefined" is for things that weren't given a value, while "null" is for things intentionally left empty. Understanding these differences is important 
+Conclusion - "undefined" is for things that weren't given a value, while "null" is for things intentionally left empty. 
+Understanding these differences is important 
+a basic interview question and a basic diff b/w undefined and null
