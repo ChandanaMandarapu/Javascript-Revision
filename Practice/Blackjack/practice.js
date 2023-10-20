@@ -205,3 +205,28 @@ myLeads.push("www.lead2.com")
 myLeads = JSON.stringify(myLeads)
 // 4. Console.log the string using typeof to verify that it's a string
 console.log(typeof myLeads)
+
+// truthy and falsy
+
+// "" , 0 , false , null , undefined , NaN - falsy value 
+// by default js keeps truth values
+
+let currentViewers = null
+
+currentViewers = ["jane", "nick"]
+
+currentViewers = null
+
+if (currentViewers) {
+    // do something , e.g. notify the live streamers
+    console.log("we have viewers")
+}
+
+// checking some expressions
+
+console.log(  Boolean("")   ) // false
+console.log(  Boolean("0")  ) // true
+console.log(  Boolean(100)  ) // true
+console.log(  Boolean(null) ) // false
+console.log(  Boolean([0])  ) // true 
+console.log(  Boolean(-0)   ) // false
