@@ -185,3 +185,23 @@ function buy() {
 
   console.log(email);
 }
+
+// Local storage in JavaScript is like a small, persistent storage space in your browser. It lets you store data like user preferences or settings on a user's device, even after they close the browser. It's easy to use, and you can save and retrieve data without a server.
+
+// localStorage.setItem("myName", "Per Harald Borgen")
+
+let name = localStorage.getItem("myName")
+console.log(name)
+
+// localStorage.clear()
+
+let myLeads = `["www.awesomelead.com"]`
+
+// 1. Turn the myLeads string into an array
+myLeads = JSON.parse(myLeads)
+// 2. Push a new value to the array
+myLeads.push("www.lead2.com")
+// 3. Turn the array into a string again
+myLeads = JSON.stringify(myLeads)
+// 4. Console.log the string using typeof to verify that it's a string
+console.log(typeof myLeads)
