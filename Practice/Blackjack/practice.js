@@ -230,3 +230,30 @@ console.log(  Boolean(100)  ) // true
 console.log(  Boolean(null) ) // false
 console.log(  Boolean([0])  ) // true 
 console.log(  Boolean(-0)   ) // false
+
+// function parameters
+
+const welcomeEl = document.getElementById("welcome-el")
+
+// Give the function a parameter, greeting, that replaces "Welcome back"
+function greetUser(greeting , name , emoji) {
+    welcomeEl.textContent = `${greeting} , ${name} ${emoji}`   
+}
+
+greetUser("How are u doing","chandana","😎")
+
+function add(num1, num2) {
+  return num1 + num2
+}
+
+add(3, 4)
+
+// Arrays as parameters
+
+function getFirst(arr) {
+  return arr[0]
+}
+
+let first = getFirst([10, 452, 5])
+
+console.log(first)
