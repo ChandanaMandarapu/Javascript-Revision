@@ -25,8 +25,12 @@
             background: teal;
             color: white;
             padding: 10px 20px;
-            border: none;
+            border: 1px solid teal;
             font-weight: bold;
+        }
+        #delete-btn{
+            background-color: white;
+            color: teal;
         }
 
         ul {
@@ -48,6 +52,7 @@
 <body>
     <input type="text" id="input-el">
     <button id="input-btn" onclick="saveLead()">SAVE INPUT</button>
+    <button id = "delete-btn">DELETE ALL</button>
     <ul id="ul-el">
     </ul>
     <script src="main.js"></script>
