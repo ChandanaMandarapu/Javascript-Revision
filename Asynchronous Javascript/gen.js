@@ -26,3 +26,19 @@ async function asyncFunctionWithTimeout() {
 }
 
 asyncFunctionWithTimeout();
+
+// error handling
+
+async function asyncOperationWithError() {
+  throw new Error('Async Operation Failed');
+}
+
+async function handleAsyncError() {
+  try {
+    await asyncOperationWithError();
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+}
+
+handleAsyncError();
