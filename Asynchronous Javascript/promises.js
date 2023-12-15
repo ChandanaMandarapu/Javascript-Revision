@@ -106,3 +106,19 @@ async function getUsers(){
 //   .catch((error) => {
 //     console.log("error");
 //   });
+
+function timeout(ms) {
+  return new Promise((_, reject) => setTimeout(() => reject('Timeout Error'), ms));
+}
+
+async function asyncFunctionWithTimeout() {
+  try {
+    const result = await Promise.race([asyncOperation(4), timeout(1500)]);
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+asyncFunctionWithTimeout();
+
