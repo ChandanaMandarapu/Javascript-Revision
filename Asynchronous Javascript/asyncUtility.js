@@ -36,3 +36,33 @@ const fetchData = async () => {
 };
 
 fetchData();
+
+// Asynchronous utility functions using Promises
+
+// Function to simulate an asynchronous API call
+const mockAPICall = (data, delay) => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(data);
+    }, delay);
+  });
+};
+
+// Async function to fetch data from multiple APIs concurrently
+const fetchDataConcurrently = async () => {
+  try {
+    const [result1, result2] = await Promise.all([
+      mockAPICall({ name: 'Data from API 1' }, 2000),
+      mockAPICall({ name: 'Data from API 2' }, 1500)
+    ]);
+
+    console.log('Result from API 1:', result1);
+    console.log('Result from API 2:', result2);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
+
+// Call the async function
+fetchDataConcurrently();
+
