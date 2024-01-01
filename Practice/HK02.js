@@ -1,12 +1,39 @@
 
-// class ListNode {
-//   constructor(value) {
-//     this.value = value;
-//     this.next = null;
+// // class ListNode {
+// //   constructor(value) {
+// //     this.value = value;
+// //     this.next = null;
+// //   }
+// // }
+
+// // // Create a linked list with a cycle
+// // const head = new ListNode(1);
+// // const second = new ListNode(2);
+// // const third = new ListNode(3);
+
+// // head.next = second;
+// // second.next = third;
+// // third.next = second; // Cycle: third -> second
+
+// // console.log(hasCycle(head)); // Should return true
+
+// function hasCycle(head) {
+//   let slow = head;
+//   let fast = head;
+
+//   while (fast !== null && fast.next !== null) {
+//     slow = slow.next;
+//     fast = fast.next.next;
+
+//     if (slow === fast) {
+//       return true; // Cycle detected
+//     }
 //   }
+
+//   return false; // No cycle found
 // }
 
-// // Create a linked list with a cycle
+// // Test the function
 // const head = new ListNode(1);
 // const second = new ListNode(2);
 // const third = new ListNode(3);
@@ -16,30 +43,22 @@
 // third.next = second; // Cycle: third -> second
 
 // console.log(hasCycle(head)); // Should return true
+// // Implement a function that performs a binary search on a sorted array.
+// function binarySearch(arr, target) {
+//   let left = 0;
+//   let right = arr.length - 1;
 
-function hasCycle(head) {
-  let slow = head;
-  let fast = head;
+//   while (left <= right) {
+//     let mid = Math.floor((left + right) / 2);
 
-  while (fast !== null && fast.next !== null) {
-    slow = slow.next;
-    fast = fast.next.next;
+//     if (arr[mid] === target) {
+//       return mid;
+//     } else if (arr[mid] < target) {
+//       left = mid + 1;
+//     } else {
+//       right = mid - 1;
+//     }
+//   }
 
-    if (slow === fast) {
-      return true; // Cycle detected
-    }
-  }
-
-  return false; // No cycle found
-}
-
-// Test the function
-const head = new ListNode(1);
-const second = new ListNode(2);
-const third = new ListNode(3);
-
-head.next = second;
-second.next = third;
-third.next = second; // Cycle: third -> second
-
-console.log(hasCycle(head)); // Should return true
+//   return -1;
+// }
