@@ -22,3 +22,26 @@ const matrix = [
 rotateMatrix(matrix);
 
 console.log(matrix);
+
+function deepClone(obj) {
+  if (typeof obj !== 'object' || obj === null) {
+    return obj;
+  }
+
+  let clone;
+  if (Array.isArray(obj)) {
+    clone = [];
+    for (let i = 0; i < obj.length; i++) {
+      clone[i] = deepClone(obj[i]);
+    }
+  } else {
+    clone = {};
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        clone[key] = deepClone(obj[key]);
+      }
+    }
+  }
+
+  return clone;
+}
