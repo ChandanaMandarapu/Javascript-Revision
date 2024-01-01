@@ -1,28 +1,45 @@
-// // 
+// // // 
+// // const nums = [2, 7, 11, 15];
+// // const target = 9;
+
+// // console.log(twoSum(nums, target)); // Should return [0, 1] or [1, 0]
+
+// function twoSum(nums, target) {
+//   const numMap = new Map();
+
+//   for (let i = 0; i < nums.length; i++) {
+//     const complement = target - nums[i];
+
+//     if (numMap.has(complement)) {
+//       return [numMap.get(complement), i];
+//     }
+
+//     numMap.set(nums[i], i);
+//   }
+
+//   // No solution found
+//   return [];
+// }
+
+// // Test the function
 // const nums = [2, 7, 11, 15];
 // const target = 9;
 
 // console.log(twoSum(nums, target)); // Should return [0, 1] or [1, 0]
 
-function twoSum(nums, target) {
-  const numMap = new Map();
+// function fibonacci(n) {
+//   if (n <= 1) {
+//     return n;
+//   }
 
-  for (let i = 0; i < nums.length; i++) {
-    const complement = target - nums[i];
+//   let a = 0;
+//   let b = 1;
 
-    if (numMap.has(complement)) {
-      return [numMap.get(complement), i];
-    }
+//   for (let i = 2; i <= n; i++) {
+//     let temp = a + b;
+//     a = b;
+//     b = temp;
+//   }
 
-    numMap.set(nums[i], i);
-  }
-
-  // No solution found
-  return [];
-}
-
-// Test the function
-const nums = [2, 7, 11, 15];
-const target = 9;
-
-console.log(twoSum(nums, target)); // Should return [0, 1] or [1, 0]
+//   return b;
+// }
